@@ -5,8 +5,8 @@ import { PlusCircle, Trash } from 'lucide-react';
 import { useState } from 'react';
 
 const page = () => {
-  const [items, setItems] = useState<Array<string>>([]);
   const [itemToAdd, setItemToAdd] = useState<string>('');
+  const [items, setItems] = useState<Array<string>>([]);
 
   const handleClickOnAddButton = () => {
     setItems([...items, itemToAdd]);
