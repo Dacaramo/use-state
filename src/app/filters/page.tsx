@@ -19,10 +19,10 @@ const page = () => {
   const handleFilterChange = (
     e: ChangeEvent<HTMLInputElement | HTMLSelectElement>
   ) => {
-    setFilters((prev) => ({
-      ...prev,
+    setFilters({
+      ...filters,
       [e.target.name]: e.target.value,
-    }));
+    });
   };
 
   return (
@@ -68,7 +68,7 @@ const page = () => {
         <span className='font-semibold'>Variable de estado "filters":</span>
         <pre>{JSON.stringify(filters, null, 2)}</pre>
         <span className='font-semibold'>Url al que se hará la solicitud:</span>
-        <pre>{`https://www.algo-que-no-existe.com/datos?${new URLSearchParams(
+        <pre>{`https://www.algo-que-no-existe.com/productos?${new URLSearchParams(
           filters
         )}`}</pre>
       </div>
